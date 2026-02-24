@@ -7,7 +7,7 @@ import { AnimatedSection, StaggerContainer, itemVariants } from '../components/A
 import { FolderOpen, BookOpen, Brain, Mail, Sparkles, ArrowRight, Download } from 'lucide-react';
 import { motion } from 'motion/react';
 import groceriesImage from '../../assets/Grocery/Grocery web.jpg';
-import computerClubImage from '../../assets/Computer Club/Computer club website.jpg';
+import computerClubImage from '../../assets/Computer Club/Computer Club website.jpg';
 import cvFile from "../../assets/Cv/Amad Uddin Osama(Ui ux & Research).pdf";
 
 export function Home() {
