@@ -12,7 +12,7 @@ export function About() {
     {
       degree: 'Bachelor of Science in Computer Science',
       institution: 'International Islamic University',
-      period: '2021 - Present',
+      period: '2022 - Present',
       description: 'Focus on Machine Learning, Computer Vision, and Software Engineering',
     },
   ];
@@ -30,7 +30,7 @@ export function About() {
       ],
     },
     {
-      company: 'Neurox',
+      company: 'Neurox (Freelance)',
       role: 'UI/UX Designer',
       period: '2025',
       location: 'AI Platform Landing Page',
@@ -64,20 +64,6 @@ export function About() {
     },
   ];
 
-  const experience = [
-    {
-      title: 'Product Designer',
-      company: 'Freelance',
-      period: '2022 - Present',
-      description: 'Designing user interfaces and experiences for web and mobile applications',
-    },
-    {
-      title: 'ML Research Assistant',
-      company: 'University Lab',
-      period: '2023 - Present',
-      description: 'Research on medical imaging and agricultural AI applications',
-    },
-  ];
 
   const leadership = [
     {
@@ -209,30 +195,7 @@ export function About() {
             </div>
           </Card>
         </motion.div>
-
-        <motion.div variants={itemVariants}>
-          <Card>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 bg-[#1a1a1a] rounded-xl border border-[#2a2a2a]">
-                <Briefcase className="w-6 h-6 text-purple-400" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white">Experience</h3>
-            </div>
-            <div className="space-y-6">
-              {experience.map((exp) => (
-                <div key={exp.title} className="border-l-2 border-[#2a2a2a] pl-4">
-                  <p className="text-sm text-gray-500 mb-1">{exp.period}</p>
-                  <h4 className="text-lg font-semibold text-white mb-1">{exp.title}</h4>
-                  <p className="text-gray-400 mb-2">{exp.company}</p>
-                  <p className="text-sm text-gray-500">{exp.description}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
-        </motion.div>
-      </StaggerContainer>
-
-      {/* Leadership & Volunteering */}
+        {/* Leadership & Volunteering */}
       <AnimatedSection delay={0.2}>
         <Card className="mb-8">
           <div className="flex items-center gap-3 mb-6">
@@ -264,6 +227,11 @@ export function About() {
         </Card>
       </AnimatedSection>
 
+
+
+      </StaggerContainer>
+
+      
       {/* Achievements */}
       <AnimatedSection delay={0.3}>
         <Card className="mb-8">
