@@ -82,7 +82,7 @@ export function PublicationItem({
                 className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
-                View Paper
+                View conference
               </motion.a>
             )}
             {pdfUrl && (

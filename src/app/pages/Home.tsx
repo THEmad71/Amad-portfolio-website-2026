@@ -1,37 +1,80 @@
-import { TopBar } from '../components/TopBar';
-import { Card } from '../components/ui/Card';
-import { Button } from '../components/ui/Button';
-import { StatCard } from '../components/ui/StatCard';
-import { Tag } from '../components/ui/Tag';
-import { AnimatedSection, StaggerContainer, itemVariants } from '../components/AnimatedSection';
-import { FolderOpen, BookOpen, Brain, Mail, Sparkles, ArrowRight, Download } from 'lucide-react';
-import { motion } from 'motion/react';
-import groceriesImage from '../../assets/Grocery/Grocery web.jpg';
-import computerClubImage from '../../assets/Computer Club/Computer Club website.jpg';
-import cvFile from "../../assets/Cv/Amad Uddin Osama(Ui ux & Research).pdf";
+// src/app/pages/Home.tsx
+
+import { motion } from "motion/react";
+import {
+  FolderOpen,
+  BookOpen,
+  Brain,
+  Mail,
+  Sparkles,
+  ArrowRight,
+  Download,
+} from "lucide-react";
+
+import { TopBar } from "../components/TopBar";
+import { PublicationItem } from "../components/PublicationItem";
+import { Card } from "../components/ui/Card";
+import { Button } from "../components/ui/Button";
+import { StatCard } from "../components/ui/StatCard";
+import { Tag } from "../components/ui/Tag";
+import {
+  AnimatedSection,
+  StaggerContainer,
+  itemVariants,
+} from "../components/AnimatedSection";
+
+// Assets
+import groceriesImage from "../../assets/Home/Grocery web.jpg";
+import computerClubImage from "../../assets/Home/Computer Club website.jpg";
+import boltpartimage from "../../assets/Home/boltparts.png";
+import cvFile from "../../assets/Home/Amad Uddin Osama(Ui ux & Research).pdf";
+import paper1 from "../../assets/Home/Comparing_Deep_Learning_Models_for_the_Recognition_of_Leaf_Diseases_in_Cucurbit_Crops.pdf";
 
 export function Home() {
   const skills = [
-    'Product Thinking',
-    'UX Research',
-    'UI Design',
-    'Design Systems',
-    'Prototyping',
-    'Frontend Development',
-    'Machine Learning',
-    'Data Analysis',
+    "Product Thinking",
+    "UX Research",
+    "UI Design",
+    "Design Systems",
+    "Prototyping",
+    "Frontend Development",
+    "Machine Learning",
+    "Data Analysis",
   ];
 
   const tools = [
-    'Figma',
-    'Framer',
-    'Notion',
-    'React',
-    'Tailwind',
-    'Python',
-    'PyTorch',
-    'TensorFlow',
+    "Figma",
+    "Framer",
+    "Notion",
+    "React",
+    "Tailwind",
+    "Python",
+    "PyTorch",
+    "TensorFlow",
   ];
+
+  // ✅ Publication data (PublicationItem এ পাঠানো হবে)
+  // NOTE: PublicationItem যে keys expect করে, সেগুলোর সাথে match না হলে prop name/keys adjust করতে হবে।
+const publications = [
+  {
+    type: "conference" as const,
+    status: "Presented",
+    title:
+      "Comparing Deep Learning Models for the Recognition of Leaf Diseases in Cucurbit Crops",
+    authors: "Amad Uddin, Research Team",
+    venue:
+      "28th International Conference on Computer and Information Technology (ICCIT 2025)",
+    year: "2025",
+    description:
+      "A comparative study of CNN and Transformer-based architectures for cucurbit leaf disease classification. The Swin Transformer achieved a peak accuracy of 94.49%, outperforming ResNet, DenseNet, MobileNetV2, and Vision Transformer models. The study highlights the effectiveness of hierarchical vision transformers for precision agriculture.",
+    tags: ["Deep Learning", "Swin Transformer", "Computer Vision", "Agriculture"],
+    paperUrl: "https://iccit.org.bd/2025/",
+    pdfUrl: paper1,
+    doiUrl: undefined, // থাকলে URL বসাও
+    codeUrl: undefined, // থাকলে URL বসাও
+  },
+];
+
 
   return (
     <div className="min-h-screen">
@@ -41,6 +84,7 @@ export function Home() {
       <AnimatedSection>
         <Card className="mb-8 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-500/5 to-transparent pointer-events-none" />
+
           <div className="max-w-4xl relative z-10">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -51,16 +95,24 @@ export function Home() {
                 Product Designer | AI Research Enthusiast
               </h2>
             </motion.div>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-gray-400 text-lg md:text-xl mb-8 leading-relaxed"
             >
-              I’m a Computer Science student at the International Islamic University with a strong focus on UI/UX and product design. I create clean, user-friendly interfaces that solve real problems and deliver meaningful user experiences.<br />
-
-              Alongside design, I actively work on AI research and research papers, exploring innovative solutions and contributing to impactful academic work. I’m passionate about combining practical product building with thoughtful research.
+              I’m a Computer Science student at the International Islamic University
+              with a strong focus on UI/UX and product design. I create clean,
+              user-friendly interfaces that solve real problems and deliver meaningful
+              user experiences.
+              <br />
+              <br />
+              Alongside design, I actively work on AI research and research papers,
+              exploring innovative solutions and contributing to impactful academic work.
+              I’m passionate about combining practical product building with thoughtful research.
             </motion.p>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -71,6 +123,7 @@ export function Home() {
                 <Sparkles className="w-5 h-5" />
                 Let's Work Together
               </Button>
+
               <a href={cvFile} target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="lg">
                   <Download className="w-5 h-5" />
@@ -118,6 +171,7 @@ export function Home() {
               >
                 <FolderOpen className="w-7 h-7 text-green-400" />
               </motion.div>
+
               <div>
                 <h4 className="text-2xl font-bold text-white mb-2">Groceries Website</h4>
                 <p className="text-gray-500">2023</p>
@@ -136,9 +190,10 @@ export function Home() {
               />
             </motion.div>
 
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              A modern e-commerce platform for fresh groceries with intuitive navigation and seamless checkout experience.
-              Built with a focus on accessibility and mobile-first design principles.
+            <div className="text-gray-400 mb-6 leading-relaxed">
+              A modern e-commerce platform for fresh groceries with intuitive navigation
+              and seamless checkout experience. Built with a focus on accessibility and
+              mobile-first design principles.
               <div className="mt-6">
                 <Button asChild variant="secondary" size="sm">
                   <a
@@ -150,11 +205,9 @@ export function Home() {
                   </a>
                 </Button>
               </div>
-            </p>
-            
+            </div>
 
             <div className="flex flex-wrap gap-2">
-              
               <Tag variant="accent">E-commerce</Tag>
               <Tag variant="accent">UI/UX</Tag>
               <Tag variant="accent">Figma</Tag>
@@ -162,6 +215,60 @@ export function Home() {
             </div>
           </Card>
         </div>
+      </AnimatedSection>
+
+      {/* Boltparts UAE Project */}
+      <AnimatedSection delay={0.3}>
+        <Card hover glow className="overflow-hidden group mb-12">
+          <div className="flex items-start gap-6 mb-6">
+            <motion.div
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.6 }}
+              className="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-red-600/10 rounded-2xl flex items-center justify-center border border-orange-500/20"
+            >
+              <FolderOpen className="w-7 h-7 text-orange-400" />
+            </motion.div>
+
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-2">
+                Boltparts — Automotive Parts & Garage Service Platform
+              </h4>
+              <p className="text-gray-500">2025 • UAE</p>
+            </div>
+          </div>
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+            className="aspect-video bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl overflow-hidden mb-6 border border-[#2a2a2a]"
+          >
+            <img
+              src={boltpartimage}
+              alt="Boltparts Automotive Website"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </motion.div>
+
+          <p className="text-gray-400 mb-6 leading-relaxed">
+            Designed a modern automotive parts and garage service website for UAE-based Boltparts.
+            The platform enables users to browse spare parts, explore services, and book garage
+            appointments seamlessly. Focused on intuitive navigation, structured product categories,
+            and a mobile-first responsive experience to enhance usability and customer trust.
+          </p>
+
+          <div className="flex flex-wrap gap-2 mb-6">
+            <Tag variant="accent">E-commerce</Tag>
+            <Tag variant="accent">UI/UX</Tag>
+            <Tag variant="accent">Automotive</Tag>
+            <Tag variant="accent">Responsive Design</Tag>
+          </div>
+
+          <Button asChild variant="secondary" size="sm">
+            <a href="YOUR_FIGMA_OR_LIVE_LINK" target="_blank" rel="noopener noreferrer">
+              View Prototype
+            </a>
+          </Button>
+        </Card>
       </AnimatedSection>
 
       {/* Computer Club Project */}
@@ -175,6 +282,7 @@ export function Home() {
             >
               <FolderOpen className="w-7 h-7 text-purple-400" />
             </motion.div>
+
             <div>
               <h4 className="text-2xl font-bold text-white mb-2">Computer club website</h4>
               <p className="text-gray-500">2023</p>
@@ -193,10 +301,21 @@ export function Home() {
             />
           </motion.div>
 
-          <p className="text-gray-400 mb-6 leading-relaxed">
+          <div className="text-gray-400 mb-6 leading-relaxed">
             The IIUC Computer Club, one of the most active student organizations at the International Islamic University.
             A platform to showcase events, programming contests, and resources for students.
-          </p>
+            <div className="mt-6">
+              <Button asChild variant="secondary" size="sm">
+                <a
+                  href="https://www.figma.com/proto/HmmpnhVxo5hhrOvSKryFIe/Computer-Club-Web-MAIN?page-id=0%3A1&node-id=2-2&p=f&viewport=370%2C39%2C0.02&t=xdk5vRuh5urYjlLv-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2%3A2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Prototype
+                </a>
+              </Button>
+            </div>
+          </div>
 
           <div className="flex flex-wrap gap-2">
             <Tag variant="accent">Web Design</Tag>
@@ -206,6 +325,18 @@ export function Home() {
           </div>
         </Card>
       </AnimatedSection>
+
+      {/* Publications (uses PublicationItem) */}
+<AnimatedSection delay={0.4}>
+  <div className="mb-12">
+    <h3 className="text-3xl font-bold text-white mb-6">Publications</h3>
+    <div className="space-y-6">
+      {publications.map((pub, idx) => (
+        <PublicationItem key={idx} {...pub} />
+      ))}
+    </div>
+  </div>
+</AnimatedSection>
 
       {/* About & Skills */}
       <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -226,6 +357,7 @@ export function Home() {
         <motion.div variants={itemVariants}>
           <Card>
             <h3 className="text-2xl font-semibold text-white mb-6">Skills & Tools</h3>
+
             <div className="mb-6">
               <p className="text-sm text-gray-500 mb-3 font-medium">Core Skills</p>
               <div className="flex flex-wrap gap-2">
@@ -241,6 +373,7 @@ export function Home() {
                 ))}
               </div>
             </div>
+
             <div>
               <p className="text-sm text-gray-500 mb-3 font-medium">Tools & Technologies</p>
               <div className="flex flex-wrap gap-2">
@@ -265,7 +398,9 @@ export function Home() {
         <Card className="mt-12 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 pointer-events-none" />
           <div className="relative z-10 max-w-3xl mx-auto py-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Have a project in mind?</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Have a project in mind?
+            </h3>
             <p className="text-gray-400 text-base md:text-lg mb-8 leading-relaxed px-4">
               I can help designing a website, designing a new product, improving an existing part of your product,
               or help you to improve your brand identity.
