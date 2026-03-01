@@ -1,5 +1,6 @@
 // src/posts.ts
-import webDesignImage from "../assets/webDesign.png";
+import ictAmbassadorPoster from "../assets/Thoughts/Ict olympiad/ambassador-poster.jpg";
+import ictSpeechImage from "../assets/Thoughts/Ict olympiad/ictSpeechImage.jpeg";
 
 export interface Post {
   slug: string;
@@ -14,19 +15,53 @@ export interface Post {
 
 export const posts: Post[] = [
   {
-    slug: "tips-for-effective-web-design",
-    title: "Tips for Effective Web Design",
+    slug: "ict-olympiad-campus-ambassador-leader",
+    title: "ICT Olympiad Bangladesh — Campus Ambassador Leader (Season 3)",
     excerpt:
-      "A website is often the first point of contact between a business and its audience. Learn the essential principles for creating engaging and effective web experiences.",
-    date: "Aug 14, 2023",
-    readTime: "5 min read",
-    tags: ["Web Design", "UI/UX", "Tips"],
-    image: webDesignImage as unknown as string,
-    content: `Full article content for testing...
+      "A leadership journey of promoting technology, inspiring students, and representing my university at a national ICT platform.",
+    date: "Oct 2024",
+    readTime: "4 min read",
+    tags: ["Leadership", "ICT Olympiad", "Campus Ambassador", "Public Speaking"],
+    image: ictAmbassadorPoster,
+    content:
+      `
+    <div class="space-y-6">
+<div class="overflow-hidden rounded-xl flex justify-start">
+</div>
 
-You can write multiple paragraphs here.
+      <p>
+        Being selected as a Campus Ambassador Leader for ICT Olympiad Bangladesh (Season 3)
+        was both an honor and a responsibility. Representing International Islamic University Chittagong,
+        I worked to promote technology-driven learning and encourage students to participate
+        in one of the country's largest ICT competitions.
+      </p>
 
-Add more text for testing.`,
+      <p>
+        My role involved organizing awareness campaigns, guiding participants,
+        and coordinating with the national organizing team. Through this experience,
+        I strengthened my communication, leadership, and community-building skills.
+      </p>
+
+      <div class="overflow-hidden rounded-xl flex justify-start">
+        <img src="${ictSpeechImage}" 
+             alt="Delivering speech during ICT Olympiad campaign" 
+             class="max-w-sm object-cover rounded-xl" />
+      </div>
+
+      <p>
+        One of the most impactful moments of this journey was delivering a speech
+        during our campus campaign session. Standing in front of students and
+        motivating them to participate in a national-level technology competition
+        was truly inspiring.
+      </p>
+
+      <p>
+        ICT Olympiad was not just an event — it was a movement to inspire future
+        technologists and innovators.
+      </p>
+
+    </div>
+  `,
   },
   {
     slug: "ai-design",

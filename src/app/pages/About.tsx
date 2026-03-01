@@ -10,8 +10,8 @@ import Amadpic from "../../assets/Amad.png";
 export function About() {
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'International Islamic University',
+      degree: 'Bachelor in Computer Science',
+      institution: 'International Islamic University, Chittagong',
       period: '2022 - Present',
       description: 'Focus on Machine Learning, Computer Vision, and Software Engineering',
     },
@@ -195,6 +195,8 @@ export function About() {
             </div>
           </Card>
         </motion.div>
+
+
         {/* Leadership & Volunteering */}
       <AnimatedSection delay={0.2}>
         <Card className="mb-8">
