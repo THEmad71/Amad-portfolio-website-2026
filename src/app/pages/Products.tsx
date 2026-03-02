@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button';
 import { AnimatedSection, StaggerContainer, itemVariants } from '../components/AnimatedSection';
 import { ExternalLink, Github, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
-import groceriesAppImage from '../../assets/groceryapp.png';
+import groceriesAppImage from '../../assets/Products/groceries-app.png';
 
 const products = [
   {
@@ -90,7 +90,14 @@ export function Products() {
 
             <div className="flex gap-3 mb-6">
               <Button variant="primary" size="md" className="flex-1">
-                Get Template
+                
+                <a
+                  href="https://wa.me/8801994423188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Let's Work Together
+                </a>
               </Button>
               <Button variant="secondary" size="md">
                 <ExternalLink className="w-5 h-5" />
@@ -137,7 +144,14 @@ export function Products() {
 
             <div className="flex gap-3 mb-6">
               <Button variant="primary" size="md" className="flex-1">
-                Purchase Now
+                
+                                <a
+                  href="https://wa.me/8801994423188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Let's Work Together
+                </a>
               </Button>
               <Button variant="secondary" size="md">
                 <ExternalLink className="w-5 h-5" />
@@ -153,7 +167,7 @@ export function Products() {
         </motion.div>
       </StaggerContainer>
 
-      {/* Other Products */}
+      {/* Other Products
       <AnimatedSection delay={0.2}>
         <h3 className="text-3xl font-bold text-white mb-8">More Projects</h3>
       </AnimatedSection>
@@ -227,7 +241,7 @@ export function Products() {
             </Card>
           </motion.div>
         ))}
-      </StaggerContainer>
+      </StaggerContainer> */}
 
       {/* CTA Section */}
       <AnimatedSection delay={0.4}>
@@ -240,7 +254,14 @@ export function Products() {
             </p>
             <Button variant="primary" size="lg">
               <Sparkles className="w-5 h-5" />
-              Let's Work Together
+              <a
+                  href="https://wa.me/8801994423188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Let's Work Together
+                </a>
+
             </Button>
           </div>
         </Card>

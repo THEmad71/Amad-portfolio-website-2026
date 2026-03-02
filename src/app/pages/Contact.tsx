@@ -13,16 +13,27 @@ export function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const subject = encodeURIComponent(
+    `Portfolio Contact from ${formData.name}`
+  );
+
+  const body = encodeURIComponent(
+    `Name: ${formData.name}\n` +
+    `Email: ${formData.email}\n\n` +
+    `Message:\n${formData.message}`
+  );
+
+  window.location.href =
+    `mailto:amaduddinosama@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'amad.uddin@example.com', link: 'mailto:amad.uddin@example.com' },
-    { icon: MessageSquare, label: 'LinkedIn', value: 'linkedin.com/in/amaduddin', link: 'https://linkedin.com' },
-    { icon: MapPin, label: 'Location', value: 'Dhaka, Bangladesh', link: null },
+    { icon: Mail, label: 'Email', value: 'amaduddinosama@gmail.com', link: 'mailto:amaduddinosama@gmail.com' },
+    { icon: MessageSquare, label: 'LinkedIn', value: 'www.linkedin.com/in/amad-uddin-osama', link: 'https://www.linkedin.com/in/amad-uddin-osama/' },
+    { icon: MapPin, label: 'Location', value: 'Chiitagong, Bangladesh', link: null },
   ];
 
   return (

@@ -55,25 +55,25 @@ export function Home() {
 
   // ✅ Publication data (PublicationItem এ পাঠানো হবে)
   // NOTE: PublicationItem যে keys expect করে, সেগুলোর সাথে match না হলে prop name/keys adjust করতে হবে।
-const publications = [
-  {
-    type: "conference" as const,
-    status: "Presented",
-    title:
-      "Comparing Deep Learning Models for the Recognition of Leaf Diseases in Cucurbit Crops",
-    authors: "Amad Uddin, Research Team",
-    venue:
-      "28th International Conference on Computer and Information Technology (ICCIT 2025)",
-    year: "2025",
-    description:
-      "A comparative study of CNN and Transformer-based architectures for cucurbit leaf disease classification. The Swin Transformer achieved a peak accuracy of 94.49%, outperforming ResNet, DenseNet, MobileNetV2, and Vision Transformer models. The study highlights the effectiveness of hierarchical vision transformers for precision agriculture.",
-    tags: ["Deep Learning", "Swin Transformer", "Computer Vision", "Agriculture"],
-    paperUrl: "https://iccit.org.bd/2025/",
-    pdfUrl: paper1,
-    doiUrl: undefined, // থাকলে URL বসাও
-    codeUrl: undefined, // থাকলে URL বসাও
-  },
-];
+  const publications = [
+    {
+      type: "conference" as const,
+      status: "Presented",
+      title:
+        "Comparing Deep Learning Models for the Recognition of Leaf Diseases in Cucurbit Crops",
+      authors: "Amad Uddin, Research Team",
+      venue:
+        "28th International Conference on Computer and Information Technology (ICCIT 2025)",
+      year: "2025",
+      description:
+        "A comparative study of CNN and Transformer-based architectures for cucurbit leaf disease classification. The Swin Transformer achieved a peak accuracy of 94.49%, outperforming ResNet, DenseNet, MobileNetV2, and Vision Transformer models. The study highlights the effectiveness of hierarchical vision transformers for precision agriculture.",
+      tags: ["Deep Learning", "Swin Transformer", "Computer Vision", "Agriculture"],
+      paperUrl: "https://iccit.org.bd/2025/",
+      pdfUrl: paper1,
+      doiUrl: undefined, // থাকলে URL বসাও
+      codeUrl: undefined, // থাকলে URL বসাও
+    },
+  ];
 
 
   return (
@@ -121,8 +121,16 @@ const publications = [
             >
               <Button variant="primary" size="lg">
                 <Sparkles className="w-5 h-5" />
-                Let's Work Together
+                <a
+                  href="https://wa.me/8801994423188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Let's Work Together
+                </a>
+
               </Button>
+
 
               <a href={cvFile} target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="lg">
@@ -327,16 +335,16 @@ const publications = [
       </AnimatedSection>
 
       {/* Publications (uses PublicationItem) */}
-<AnimatedSection delay={0.4}>
-  <div className="mb-12">
-    <h3 className="text-3xl font-bold text-white mb-6">Publications</h3>
-    <div className="space-y-6">
-      {publications.map((pub, idx) => (
-        <PublicationItem key={idx} {...pub} />
-      ))}
-    </div>
-  </div>
-</AnimatedSection>
+      <AnimatedSection delay={0.4}>
+        <div className="mb-12">
+          <h3 className="text-3xl font-bold text-white mb-6">Publications</h3>
+          <div className="space-y-6">
+            {publications.map((pub, idx) => (
+              <PublicationItem key={idx} {...pub} />
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
 
       {/* About & Skills */}
       <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -408,8 +416,16 @@ const publications = [
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="primary" size="lg">
                 <Sparkles className="w-5 h-5" />
-                Let's Work Together
+                <a
+                  href="https://wa.me/8801994423188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Let's Work Together
+                </a>
+
               </Button>
+
               <Button variant="secondary" size="lg">
                 <Mail className="w-5 h-5" />
                 E-mail

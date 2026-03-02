@@ -21,6 +21,9 @@ import nasa from "../../assets/project/nasa-space-app.jpg";
 import computerclub from "../../assets/project/computerClub.jpg";
 import floodaware from "../../assets/project/floodaware.jpg";
 import poster from "../../assets/project/poster.jpg";
+import hoodie from "../../assets/project/hoodie.jpg";
+import jersey from "../../assets/project/jersey.jpg";
+import jonsheba from "../../assets/project/jonsheba.jpg";
 
 type Project = {
   slug: string;
@@ -107,8 +110,7 @@ const uiUxProjects: Project[] = [
     description:
       "Healthcare service platform connecting patients with medical professionals and care providers.",
     tags: ["Healthcare", "Mobile App", "UI/UX"],
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    image: jonsheba,
     prototypeUrl: "https://www.figma.com/",
   },
 ];
@@ -132,7 +134,7 @@ const graphicProjects: Project[] = [
       "Custom hoodie designs for tech clubs and student organizations with modern graphics.",
     tags: ["Apparel Design", "Branding", "Merchandise"],
     image:
-      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=400&fit=crop",
+      hoodie,
     behanceUrl: "https://www.behance.net/gallery/185403681/Hoodie-Design",
   },
   {
@@ -142,7 +144,7 @@ const graphicProjects: Project[] = [
       "Sports jersey and team apparel designs for university clubs and competitive events.",
     tags: ["Apparel Design", "Sports", "Graphics"],
     image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop",
+      jersey,
     behanceUrl: "https://www.behance.net/gallery/183858049/Jersey-Design",
   },
 ];

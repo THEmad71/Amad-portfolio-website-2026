@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Amadpic from "../../assets/Amad.png";
 
+
 const navItems = [
   { icon: Home, label: 'Home', path: '/' },
   { icon: User, label: 'About', path: '/about' },
@@ -13,14 +14,17 @@ const navItems = [
   { icon: Package, label: 'Products', path: '/products' },
   { icon: PenTool, label: 'Thoughts', path: '/thoughts' },
   { icon: Mail, label: 'Contact', path: '/contact' },
+  
 ];
 
 const socialLinks = [
-  { icon: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: 'behance', url: 'https://behance.net', label: 'Behance' },
-  { icon: 'whatsapp', url: 'https://wa.me/', label: 'WhatsApp' },
-  { icon: 'github', url: 'https://github.com', label: 'GitHub' },
+  { icon: 'linkedin', url: 'https://www.linkedin.com/in/amad-uddin-osama/', label: 'LinkedIn' },
+  { icon: 'behance', url: 'https://www.behance.net/Amad_uddin', label: 'Behance' },
+  { icon: 'whatsapp', url: 'https://wa.me/8801994423188', label: 'WhatsApp' },
+  { icon: 'github', url: 'https://github.com/THEmad71', label: 'GitHub' },
+
 ];
+              
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
