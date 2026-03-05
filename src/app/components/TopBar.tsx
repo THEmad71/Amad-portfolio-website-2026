@@ -18,7 +18,7 @@ export function TopBar({ title, rightAction }: TopBarProps) {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+        className="text-3xl md:text-3xl lg:text-4xl font-bold text-white"
       >
         {title}
       </motion.h1>

@@ -91,7 +91,7 @@ export function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
                 Product Designer | AI Research Enthusiast
               </h2>
             </motion.div>
@@ -100,7 +100,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-gray-400 text-lg md:text-xl mb-8 leading-relaxed"
+              className="text-gray-400 text-lg md:text-md mb-8 leading-relaxed"
             >
               I’m a Computer Science student at the International Islamic University
               with a strong focus on UI/UX and product design. I create clean,
