@@ -38,7 +38,7 @@ const publications = [
   status: 'Accepted (IEEE ICEET 2025)',
   paperUrl: '#',
   pdfUrl: paper2,
-  doiUrl: '#',
+  doiUrl: 'https://ieeexplore.ieee.org/document/11423931',
   codeUrl: '#',
 },
 {
@@ -53,7 +53,6 @@ const publications = [
   paperUrl: '#',
   pdfUrl: paper3,
   doiUrl: '#',
-  codeUrl: '#',
 },
 {
   title: 'Empowering Developing Nations: Sustainable Launch Approaches and Emerging Technologies for Small Satellites',
@@ -66,8 +65,7 @@ const publications = [
   status: 'Accepted (IEEE ECCE 2025)',
   paperUrl: '#',
   pdfUrl: paper4,
-  doiUrl: '#',
-  codeUrl: '#',
+  doiUrl: 'https://ieeexplore.ieee.org/document/11013107',
 },
 {
   title: 'The Future Sustainability of Jute and Tea Production in Bangladesh Under Changing Climate Conditions Using Machine Learning Models',
@@ -80,8 +78,7 @@ const publications = [
   status: 'Accepted (QPAIN 2025)',
   paperUrl: 'https://www.researchgate.net/publication/395991212_The_Future_Sustainability_of_Jute_and_Tea_Production_in_Bangladesh_Under_Changing_Climate_Conditions_Using_Machine_Learning_Models',
   pdfUrl: paper5,
-  doiUrl: '#',
-  codeUrl: '#',
+  doiUrl: 'https://ieeexplore.ieee.org/document/11171947/',
 }
 ];
 
