@@ -24,6 +24,7 @@ import poster from "../../assets/project/poster.jpg";
 import hoodie from "../../assets/project/hoodie.jpg";
 import jersey from "../../assets/project/jersey.jpg";
 import jonsheba from "../../assets/project/jonsheba.jpg";
+import formula1 from "../../assets/project/formula 1.png";
 
 type Project = {
   slug: string;
@@ -46,6 +47,20 @@ const uiUxProjects: Project[] = [
     prototypeUrl:
       "https://www.figma.com/proto/6OwHSZkliz3XCIouv0NQ6a/Boltpart--Copy-?node-id=388-14495&p=f&viewport=168%2C7%2C0.02&t=eS0rSIVVkf76gKlO-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=388%3A14495&page-id=388%3A14494",
   },
+
+  {
+    slug: "formula-1-2026-gallery-redesign",
+    title: "Formula 1 2026 Gallery Page Redesign",
+    description:
+      "A conceptual redesign of the official F1 gallery page, reimagined through the lens of the 2026 technical regulations to create a more immersive, performance-driven digital experience.",
+    tags: ["UI/UX", "Concept Design", "Automotive", "Sports"],
+    image: formula1, // Ensure this variable matches your image import
+    behanceUrl:
+      "https://www.behance.net/gallery/247735155/Formula-1-2026-Gallery-Redesign",
+},
+
+
+  
   {
     slug: "groceries-web",
     title: "Groceries Web Design",
