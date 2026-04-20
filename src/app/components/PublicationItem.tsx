@@ -127,14 +127,14 @@ export function PublicationItem({
                 Code
               </motion.a>
             )}
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg text-sm text-gray-400 hover:text-white hover:border-[#333] transition-all"
             >
               <Quote className="w-4 h-4" />
               Cite
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
       </div>
