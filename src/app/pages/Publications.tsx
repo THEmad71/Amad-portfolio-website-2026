@@ -23,8 +23,8 @@ const publications = [
   type: 'conference' as const,
   status: 'Accepted (IEEE ICCIT 2025) but not published yet',
   // paperUrl: '#',
-  // pdfUrl: paper1,
-  // doiUrl: '#',
+  pdfUrl: paper1,
+  doiUrl: 'https://ieeexplore.ieee.org/document/11491534',
   // codeUrl: '#',
 },
 {
@@ -51,8 +51,8 @@ const publications = [
   type: 'conference' as const,
   status: 'Accepted (IEEE ICCIT 2025) but not published yet',
   // paperUrl: '#',
-  // pdfUrl: paper3,
-  // doiUrl: '#',
+  pdfUrl: paper3,
+  doiUrl: 'https://ieeexplore.ieee.org/document/11491539',
 },
 {
   title: 'Empowering Developing Nations: Sustainable Launch Approaches and Emerging Technologies for Small Satellites',
