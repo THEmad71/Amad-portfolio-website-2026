@@ -232,9 +232,7 @@ export function Projects() {
                       <h4 className="text-2xl font-bold text-white mb-2">
                         {project.title}
                       </h4>
-                      <p className="text-gray-400 mb-4">
-                        {project.description}
-                      </p>
+                      <p className="text-gray-400 mb-4">{project.description}</p>
                       <div className="flex gap-2 mb-6">
                         {project.tags.map((tag) => (
                           <Tag key={tag} variant="accent">
