@@ -13,7 +13,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import type { MouseEvent } from "react";
 
-// ✅ Assets (match your folder exactly)
+// ✅ Assets
 import boltpart from "../../assets/project/boltparts.png";
 import groceryMobile from "../../assets/project/groceries-mobile.png";
 import groceryWeb from "../../assets/project/Grocery web.jpg";
@@ -32,9 +32,122 @@ type Project = {
   description: string;
   tags: string[];
   image: string;
-  prototypeUrl?: string; // figma/prototype link
-  behanceUrl?: string; // behance link
+  prototypeUrl?: string;
+  behanceUrl?: string;
 };
+
+const webProjects: Project[] = [
+  {
+    slug: "attar-al-qalb",
+    title: "Attar Al Qalb",
+    description:
+      "A full-stack e-commerce platform for premium fragrances built with the PERN stack. Features secure authentication, product catalog, and order management.",
+    tags: ["PERN Stack", "E-commerce", "Full-Stack"],
+    image: jonsheba, 
+    prototypeUrl: "https://ataralqalb.com/",
+  },
+];
+
+const uiUxProjects: Project[] = [
+  {
+    slug: "boltparts-uae",
+    title: "BoltParts – UAE Client Project",
+    description: "E-commerce platform for automotive parts with advanced filtering and inventory management system.",
+    tags: ["E-commerce", "UI/UX", "Client Work"],
+    image: boltpart,
+    prototypeUrl: "https://www.figma.com/proto/6OwHSZkliz3XCIouv0NQ6a/Boltpart--Copy-?node-id=388-14495&p=f&viewport=168%2C7%2C0.02&t=eS0rSIVVkf76gKlO-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=388%3A14495&page-id=388%3A14494",
+  },
+  {
+    slug: "formula-1-2026-gallery-redesign",
+    title: "Formula 1 2026 Gallery Page Redesign",
+    description: "A conceptual redesign of the official F1 gallery page, reimagined through the lens of the 2026 technical regulations.",
+    tags: ["UI/UX", "Concept Design", "Automotive", "Sports"],
+    image: formula1,
+    behanceUrl: "https://www.behance.net/gallery/247735155/Formula-1-2026-Gallery-Redesign",
+  },
+  {
+    slug: "groceries-web",
+    title: "Groceries Web Design",
+    description: "Modern grocery shopping platform with intuitive navigation and seamless checkout experience.",
+    tags: ["Web Design", "E-commerce", "Figma"],
+    image: groceryWeb,
+    prototypeUrl: "https://www.figma.com/design/piUb6Iv2Gmkvmvw4YIGEIj/GROCERY-WEB?node-id=0-1&t=V5hvneDCnekhoZe9-1",
+    behanceUrl: "https://www.behance.net/gallery/193838595/Grocery-Website-web-design",
+  },
+  {
+    slug: "groceries-mobile",
+    title: "Groceries Mobile App Design",
+    description: "Mobile-first grocery app design focusing on quick ordering and delivery tracking features.",
+    tags: ["Mobile Design", "UI/UX", "App"],
+    image: groceryMobile,
+    prototypeUrl: "https://www.figma.com/design/XHkMztq50cvnHjDKfLT1Sc/MOBILE-APP-GROCERY?node-id=0-1&t=goBqL3raYhsRwuoy-1",
+    behanceUrl: "https://www.behance.net/gallery/195274993/Grocery-Delivery-App-UIUX",
+  },
+  {
+    slug: "nasa-space-app",
+    title: "NASA Space App Challenge – Web Design",
+    description: "Interactive web platform for NASA Space Apps Challenge with data visualization and team collaboration.",
+    tags: ["Web Design", "NASA", "Challenge"],
+    image: nasa,
+    behanceUrl: "https://www.behance.net/gallery/210305007/ExoFun-NASA-Inspired-Space-Exploration-App",
+  },
+  {
+    slug: "floodaware",
+    title: "FloodAware App Design",
+    description: "Emergency response application for flood monitoring and community alerts with real-time updates.",
+    tags: ["Mobile App", "Social Impact", "UI/UX"],
+    image: floodaware,
+    prototypeUrl: "https://www.figma.com/design/x6jyJNyZSV3pqr8MtusGmZ/Hackathon--Copy-?node-id=0-1&t=se7xkEnVvfJuNxpM-1",
+    behanceUrl: "https://www.behance.net/gallery/220601029/FloodAware-App-UIUX-Case-Study",
+  },
+  {
+    slug: "iiuc-computer-club",
+    title: "IIUC Computer Club Website Design",
+    description: "Official website for university computer club showcasing events, contests, and student resources.",
+    tags: ["Web Design", "Education", "Community"],
+    image: computerclub,
+    prototypeUrl: "https://www.figma.com/design/HmmpnhVxo5hhrOvSKryFIe/Computer-Club-Web-MAIN?node-id=0-1&t=tvfrsuDFgfFWD3ni-1",
+    behanceUrl: "https://www.behance.net/gallery/221117007/Computer-Club-Landing-Page-ui-Design",
+  },
+  {
+    slug: "jonsheba",
+    title: "JonSheba App Design",
+    description: "Healthcare service platform connecting patients with medical professionals and care providers.",
+    tags: ["Healthcare", "Mobile App", "UI/UX"],
+    image: jonsheba,
+    prototypeUrl: "https://www.figma.com/",
+  },
+];
+
+const graphicProjects: Project[] = [
+  { slug: "poster-design", title: "Poster Design", description: "Event posters and promotional materials.", tags: ["Graphic Design", "Branding"], image: poster, behanceUrl: "https://www.behance.net/gallery/212921047/Design-for-the-IIUC-Computer-Club" },
+  { slug: "hoodie-design", title: "Hoodie Design", description: "Custom hoodie designs for tech clubs.", tags: ["Apparel Design", "Branding"], image: hoodie, behanceUrl: "https://www.behance.net/gallery/185403681/Hoodie-Design" },
+  { slug: "jersey-design", title: "Jersey Design", description: "Sports jersey designs for university clubs.", tags: ["Apparel Design", "Sports"], image: jersey, behanceUrl: "https://www.behance.net/gallery/183858049/Jersey-Design" },
+];
+
+const videoProjects: Project[] = [
+  { slug: "computer-club-videos", title: "Computer Club Video Works", description: "Promotional videos and event coverage.", tags: ["Video Production", "Motion Graphics"], image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=400&fit=crop", behanceUrl: "https://www.behance.net/gallery/236128509/IIUC-Computer-Club-202425-Video-Works" },
+];
+
+function openExternal(url?: string, e?: MouseEvent) {
+  if (e) { e.preventDefault(); e.stopPropagation(); }
+  if (!url) return;
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+export function Projects() {
+  return (
+    <div className="min-h-screen">
+      <TopBar title="Projects" />
+
+      <AnimatedSection>
+        <Card className="mb-12">
+          <h2 className="text-3xl font-semibold text-white mb-4">Creative Portfolio</h2>
+          <p className="text-gray-400 text-lg leading-relaxed">
+            A collection of web development, UI/UX design, graphic design, and video production work.
+          </p>
+        </Card>
+      </AnimatedSection>
 
 const uiUxProjects: Project[] = [
   {
