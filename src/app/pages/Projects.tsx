@@ -43,111 +43,10 @@ const webProjects: Project[] = [
     description:
       "A full-stack e-commerce platform for premium fragrances built with the PERN stack. Features secure authentication, product catalog, and order management.",
     tags: ["PERN Stack", "E-commerce", "Full-Stack"],
-    image: jonsheba, 
+    image: jonsheba,
     prototypeUrl: "https://ataralqalb.com/",
   },
 ];
-
-const uiUxProjects: Project[] = [
-  {
-    slug: "boltparts-uae",
-    title: "BoltParts – UAE Client Project",
-    description: "E-commerce platform for automotive parts with advanced filtering and inventory management system.",
-    tags: ["E-commerce", "UI/UX", "Client Work"],
-    image: boltpart,
-    prototypeUrl: "https://www.figma.com/proto/6OwHSZkliz3XCIouv0NQ6a/Boltpart--Copy-?node-id=388-14495&p=f&viewport=168%2C7%2C0.02&t=eS0rSIVVkf76gKlO-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=388%3A14495&page-id=388%3A14494",
-  },
-  {
-    slug: "formula-1-2026-gallery-redesign",
-    title: "Formula 1 2026 Gallery Page Redesign",
-    description: "A conceptual redesign of the official F1 gallery page, reimagined through the lens of the 2026 technical regulations.",
-    tags: ["UI/UX", "Concept Design", "Automotive", "Sports"],
-    image: formula1,
-    behanceUrl: "https://www.behance.net/gallery/247735155/Formula-1-2026-Gallery-Redesign",
-  },
-  {
-    slug: "groceries-web",
-    title: "Groceries Web Design",
-    description: "Modern grocery shopping platform with intuitive navigation and seamless checkout experience.",
-    tags: ["Web Design", "E-commerce", "Figma"],
-    image: groceryWeb,
-    prototypeUrl: "https://www.figma.com/design/piUb6Iv2Gmkvmvw4YIGEIj/GROCERY-WEB?node-id=0-1&t=V5hvneDCnekhoZe9-1",
-    behanceUrl: "https://www.behance.net/gallery/193838595/Grocery-Website-web-design",
-  },
-  {
-    slug: "groceries-mobile",
-    title: "Groceries Mobile App Design",
-    description: "Mobile-first grocery app design focusing on quick ordering and delivery tracking features.",
-    tags: ["Mobile Design", "UI/UX", "App"],
-    image: groceryMobile,
-    prototypeUrl: "https://www.figma.com/design/XHkMztq50cvnHjDKfLT1Sc/MOBILE-APP-GROCERY?node-id=0-1&t=goBqL3raYhsRwuoy-1",
-    behanceUrl: "https://www.behance.net/gallery/195274993/Grocery-Delivery-App-UIUX",
-  },
-  {
-    slug: "nasa-space-app",
-    title: "NASA Space App Challenge – Web Design",
-    description: "Interactive web platform for NASA Space Apps Challenge with data visualization and team collaboration.",
-    tags: ["Web Design", "NASA", "Challenge"],
-    image: nasa,
-    behanceUrl: "https://www.behance.net/gallery/210305007/ExoFun-NASA-Inspired-Space-Exploration-App",
-  },
-  {
-    slug: "floodaware",
-    title: "FloodAware App Design",
-    description: "Emergency response application for flood monitoring and community alerts with real-time updates.",
-    tags: ["Mobile App", "Social Impact", "UI/UX"],
-    image: floodaware,
-    prototypeUrl: "https://www.figma.com/design/x6jyJNyZSV3pqr8MtusGmZ/Hackathon--Copy-?node-id=0-1&t=se7xkEnVvfJuNxpM-1",
-    behanceUrl: "https://www.behance.net/gallery/220601029/FloodAware-App-UIUX-Case-Study",
-  },
-  {
-    slug: "iiuc-computer-club",
-    title: "IIUC Computer Club Website Design",
-    description: "Official website for university computer club showcasing events, contests, and student resources.",
-    tags: ["Web Design", "Education", "Community"],
-    image: computerclub,
-    prototypeUrl: "https://www.figma.com/design/HmmpnhVxo5hhrOvSKryFIe/Computer-Club-Web-MAIN?node-id=0-1&t=tvfrsuDFgfFWD3ni-1",
-    behanceUrl: "https://www.behance.net/gallery/221117007/Computer-Club-Landing-Page-ui-Design",
-  },
-  {
-    slug: "jonsheba",
-    title: "JonSheba App Design",
-    description: "Healthcare service platform connecting patients with medical professionals and care providers.",
-    tags: ["Healthcare", "Mobile App", "UI/UX"],
-    image: jonsheba,
-    prototypeUrl: "https://www.figma.com/",
-  },
-];
-
-const graphicProjects: Project[] = [
-  { slug: "poster-design", title: "Poster Design", description: "Event posters and promotional materials.", tags: ["Graphic Design", "Branding"], image: poster, behanceUrl: "https://www.behance.net/gallery/212921047/Design-for-the-IIUC-Computer-Club" },
-  { slug: "hoodie-design", title: "Hoodie Design", description: "Custom hoodie designs for tech clubs.", tags: ["Apparel Design", "Branding"], image: hoodie, behanceUrl: "https://www.behance.net/gallery/185403681/Hoodie-Design" },
-  { slug: "jersey-design", title: "Jersey Design", description: "Sports jersey designs for university clubs.", tags: ["Apparel Design", "Sports"], image: jersey, behanceUrl: "https://www.behance.net/gallery/183858049/Jersey-Design" },
-];
-
-const videoProjects: Project[] = [
-  { slug: "computer-club-videos", title: "Computer Club Video Works", description: "Promotional videos and event coverage.", tags: ["Video Production", "Motion Graphics"], image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=400&fit=crop", behanceUrl: "https://www.behance.net/gallery/236128509/IIUC-Computer-Club-202425-Video-Works" },
-];
-
-function openExternal(url?: string, e?: MouseEvent) {
-  if (e) { e.preventDefault(); e.stopPropagation(); }
-  if (!url) return;
-  window.open(url, "_blank", "noopener,noreferrer");
-}
-
-export function Projects() {
-  return (
-    <div className="min-h-screen">
-      <TopBar title="Projects" />
-
-      <AnimatedSection>
-        <Card className="mb-12">
-          <h2 className="text-3xl font-semibold text-white mb-4">Creative Portfolio</h2>
-          <p className="text-gray-400 text-lg leading-relaxed">
-            A collection of web development, UI/UX design, graphic design, and video production work.
-          </p>
-        </Card>
-      </AnimatedSection>
 
 const uiUxProjects: Project[] = [
   {
@@ -160,20 +59,16 @@ const uiUxProjects: Project[] = [
     prototypeUrl:
       "https://www.figma.com/proto/6OwHSZkliz3XCIouv0NQ6a/Boltpart--Copy-?node-id=388-14495&p=f&viewport=168%2C7%2C0.02&t=eS0rSIVVkf76gKlO-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=388%3A14495&page-id=388%3A14494",
   },
-
   {
     slug: "formula-1-2026-gallery-redesign",
     title: "Formula 1 2026 Gallery Page Redesign",
     description:
       "A conceptual redesign of the official F1 gallery page, reimagined through the lens of the 2026 technical regulations to create a more immersive, performance-driven digital experience.",
     tags: ["UI/UX", "Concept Design", "Automotive", "Sports"],
-    image: formula1, // Ensure this variable matches your image import
+    image: formula1,
     behanceUrl:
       "https://www.behance.net/gallery/247735155/Formula-1-2026-Gallery-Redesign",
-},
-
-
-  
+  },
   {
     slug: "groceries-web",
     title: "Groceries Web Design",
@@ -250,8 +145,7 @@ const graphicProjects: Project[] = [
     description:
       "Event posters and promotional materials for tech conferences and university programs.",
     tags: ["Graphic Design", "Branding", "Print"],
-    image:
-      poster,
+    image: poster,
     behanceUrl:
       "https://www.behance.net/gallery/212921047/Design-for-the-IIUC-Computer-Club",
   },
@@ -261,8 +155,7 @@ const graphicProjects: Project[] = [
     description:
       "Custom hoodie designs for tech clubs and student organizations with modern graphics.",
     tags: ["Apparel Design", "Branding", "Merchandise"],
-    image:
-      hoodie,
+    image: hoodie,
     behanceUrl: "https://www.behance.net/gallery/185403681/Hoodie-Design",
   },
   {
@@ -271,8 +164,7 @@ const graphicProjects: Project[] = [
     description:
       "Sports jersey and team apparel designs for university clubs and competitive events.",
     tags: ["Apparel Design", "Sports", "Graphics"],
-    image:
-      jersey,
+    image: jersey,
     behanceUrl: "https://www.behance.net/gallery/183858049/Jersey-Design",
   },
 ];
@@ -286,7 +178,8 @@ const videoProjects: Project[] = [
     tags: ["Video Production", "Motion Graphics", "Content"],
     image:
       "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=400&fit=crop",
-    behanceUrl: "https://www.behance.net/gallery/236128509/IIUC-Computer-Club-202425-Video-Works",
+    behanceUrl:
+      "https://www.behance.net/gallery/236128509/IIUC-Computer-Club-202425-Video-Works",
   },
 ];
 
@@ -310,9 +203,9 @@ export function Projects() {
             Creative Portfolio
           </h2>
           <p className="text-gray-400 text-lg leading-relaxed">
-            A collection of UI/UX design, graphic design, and video production
-            work spanning client projects, academic initiatives, and community
-            contributions.
+            A collection of web development, UI/UX design, graphic design, and
+            video production work spanning client projects, academic
+            initiatives, and community contributions.
           </p>
         </Card>
       </AnimatedSection>
@@ -320,22 +213,39 @@ export function Projects() {
       {/* Web Projects */}
       <AnimatedSection delay={0.1}>
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Web Development</h3>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">
+            Web Development
+          </h3>
           <StaggerContainer className="grid grid-cols-1 gap-6">
             {webProjects.map((project) => (
               <motion.div key={project.slug} variants={itemVariants}>
                 <Card hover glow className="group">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-96 aspect-video rounded-2xl overflow-hidden border border-[#2a2a2a]">
-                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1 flex flex-col">
-                      <h4 className="text-2xl font-bold text-white mb-2">{project.title}</h4>
-                      <p className="text-gray-400 mb-4">{project.description}</p>
+                      <h4 className="text-2xl font-bold text-white mb-2">
+                        {project.title}
+                      </h4>
+                      <p className="text-gray-400 mb-4">
+                        {project.description}
+                      </p>
                       <div className="flex gap-2 mb-6">
-                        {project.tags.map(tag => <Tag key={tag} variant="accent">{tag}</Tag>)}
+                        {project.tags.map((tag) => (
+                          <Tag key={tag} variant="accent">
+                            {tag}
+                          </Tag>
+                        ))}
                       </div>
-                      <Button variant="secondary" onClick={(e) => openExternal(project.prototypeUrl, e)}>
+                      <Button
+                        variant="secondary"
+                        onClick={(e) => openExternal(project.prototypeUrl, e)}
+                      >
                         <ExternalLink className="w-4 h-4" /> Visit Website
                       </Button>
                     </div>
@@ -346,7 +256,7 @@ export function Projects() {
           </StaggerContainer>
         </div>
       </AnimatedSection>
-      
+
       {/* UI/UX Projects */}
       <AnimatedSection delay={0.1}>
         <div className="mb-16">
@@ -362,8 +272,8 @@ export function Projects() {
                 <Link to={`/projects/${project.slug}`} className="block">
                   <Card hover glow className="h-full group cursor-pointer">
                     <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.4 }}
+                      whileHover= scale: 1.02 
+                      transition= duration: 0.4 
                       className="aspect-video bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl overflow-hidden mb-6 border border-[#2a2a2a]"
                     >
                       <img
@@ -424,7 +334,8 @@ export function Projects() {
 
                     <div className="mt-4 flex items-center gap-2 text-xs text-gray-500">
                       <FileText className="w-4 h-4" />
-                      Click prototype or Behance buttons to view detailed case study and project breakdowns.
+                      Click prototype or Behance buttons to view detailed case
+                      study and project breakdowns.
                     </div>
                   </Card>
                 </Link>
@@ -449,8 +360,8 @@ export function Projects() {
                 <Link to={`/projects/${project.slug}`} className="block">
                   <Card hover glow className="h-full group cursor-pointer">
                     <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.4 }}
+                      whileHover= scale: 1.02 
+                      transition= duration: 0.4 
                       className="aspect-square bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl overflow-hidden mb-6 border border-[#2a2a2a]"
                     >
                       <img
@@ -509,8 +420,8 @@ export function Projects() {
                   <Card hover glow className="group cursor-pointer">
                     <div className="flex flex-col md:flex-row gap-6">
                       <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.4 }}
+                        whileHover= scale: 1.02 
+                        transition= duration: 0.4 
                         className="md:w-96 aspect-video bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl overflow-hidden border border-[#2a2a2a] flex-shrink-0"
                       >
                         <img
