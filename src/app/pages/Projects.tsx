@@ -204,6 +204,36 @@ export function Projects() {
         </Card>
       </AnimatedSection>
 
+      {/* Web Projects */}
+      <AnimatedSection delay={0.1}>
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Web Development</h3>
+          <StaggerContainer className="grid grid-cols-1 gap-6">
+            {webProjects.map((project) => (
+              <motion.div key={project.slug} variants={itemVariants}>
+                <Card hover glow className="group">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="md:w-96 aspect-video rounded-2xl overflow-hidden border border-[#2a2a2a]">
+                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 flex flex-col">
+                      <h4 className="text-2xl font-bold text-white mb-2">{project.title}</h4>
+                      <p className="text-gray-400 mb-4">{project.description}</p>
+                      <div className="flex gap-2 mb-6">
+                        {project.tags.map(tag => <Tag key={tag} variant="accent">{tag}</Tag>)}
+                      </div>
+                      <Button variant="secondary" onClick={(e) => openExternal(project.prototypeUrl, e)}>
+                        <ExternalLink className="w-4 h-4" /> Visit Website
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </StaggerContainer>
+        </div>
+      </AnimatedSection>
+      
       {/* UI/UX Projects */}
       <AnimatedSection delay={0.1}>
         <div className="mb-16">
