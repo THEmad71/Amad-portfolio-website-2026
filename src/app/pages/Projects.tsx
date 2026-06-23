@@ -36,6 +36,10 @@ type Project = {
   behanceUrl?: string;
 };
 
+// Animation config (defined as objects so we pass them with single braces)
+const hoverScale = { scale: 1.02 };
+const hoverTransition = { duration: 0.4 };
+
 const webProjects: Project[] = [
   {
     slug: "attar-al-qalb",
@@ -270,8 +274,8 @@ export function Projects() {
                 <Link to={`/projects/${project.slug}`} className="block">
                   <Card hover glow className="h-full group cursor-pointer">
                     <motion.div
-                      whileHover= scale: 1.02 
-                      transition= duration: 0.4 
+                      whileHover={hoverScale}
+                      transition={hoverTransition}
                       className="aspect-video bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl overflow-hidden mb-6 border border-[#2a2a2a]"
                     >
                       <img
@@ -358,8 +362,8 @@ export function Projects() {
                 <Link to={`/projects/${project.slug}`} className="block">
                   <Card hover glow className="h-full group cursor-pointer">
                     <motion.div
-                      whileHover= scale: 1.02 
-                      transition= duration: 0.4 
+                      whileHover={hoverScale}
+                      transition={hoverTransition}
                       className="aspect-square bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl overflow-hidden mb-6 border border-[#2a2a2a]"
                     >
                       <img
@@ -418,8 +422,8 @@ export function Projects() {
                   <Card hover glow className="group cursor-pointer">
                     <div className="flex flex-col md:flex-row gap-6">
                       <motion.div
-                        whileHover= scale: 1.02 
-                        transition= duration: 0.4 
+                        whileHover={hoverScale}
+                        transition={hoverTransition}
                         className="md:w-96 aspect-video bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl overflow-hidden border border-[#2a2a2a] flex-shrink-0"
                       >
                         <img
